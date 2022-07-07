@@ -1,0 +1,17 @@
+header {
+    background-color: crimson;
+    position: center;
+}
+p{
+    font-family: sans-serif;
+}
+
+/*footer {*/
+/*    text-align: center;*/
+/*    background-color: dodgerblue;*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+/*    height: 40px;*/
+/*    padding: 10px 10px 10px 10px;*/
+/*    bottom: 0;*/
+/*}*/
