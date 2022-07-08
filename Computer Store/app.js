@@ -8,7 +8,7 @@ let result = []
     const laptopDescription = document.getElementById("description");
     const getLoan = document.getElementById("get-loan");
     const bank = document.getElementById("bank");
-    const work = document.getElementById("loan");
+    const work = document.getElementById("work");
 
 init();
 
@@ -46,11 +46,15 @@ const handleLoanEvent = e => {
 
 }
 
-
 const handleWorkEvent = e => {
-    pay.innerText += 100;
+    const price1 = parseInt(price.innerText);
+    price.innerText = price1 + 100;
+}
 
-
+const handleBankEvent = e => {
+    const balance1 = parseInt(balance.innerText) + parseInt(price.innerText);
+    price.innerText = 0;
+    balance.innerText = balance1;
 }
 
 laptops.addEventListener("change", handleLaptopDropDown)
@@ -58,6 +62,8 @@ laptops.addEventListener("change", handleLaptopDropDown)
 getLoan.addEventListener("click", handleLoanEvent )
 
 work.addEventListener("click", handleWorkEvent )
+
+bank.addEventListener("click", handleBankEvent )
 
 // Eventlisteners
 
