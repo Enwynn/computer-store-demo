@@ -7,43 +7,52 @@
 </head>
 
 
+<header> Computer Store</header>
 
-<header> Computer Store </header>
-<main>
-    <p> Welcome. Work to be able to buy computers. </p>
-</main>
+<h4> Welcome. Work to be able to buy computers. </h4>
+
 
 <body>
 
-<div>
-    <h1> Joe Banker </h1>
-    <span> Balance - </span>
-    <span id = "balance"></span>
-    <span> Kr </span>
-    <div>
-        <button id="get-loan">Get a loan</button>
+<div class="container">
+    <div class="post">
+        <h1> Joe Banker </h1>
+        <span> Balance : </span>
+        <span id="balance"></span>
+        <span> Kr </span>
+        <br>
+        <span> Loan : </span>
+        <span id="loan"></span>
+        <span> Kr </span>
+
+        <div>
+            <button id="get-loan">Get a loan</button>
+        </div>
     </div>
 
-</div>
+    <div class="post">
+        <h1> Work </h1>
+        <span> Pay - </span>
+        <span id="pay"> </span>
+        <span> Kr </span>
+        <div>
+            <button id="bank">Bank</button>
+            <button id="work">Work</button>
+            <button id="repay-loan" hidden="hidden">Repay Loan</button>
+        </div>
+    </div>
 
-<div>
-    <h1> Work </h1>
-    <span> Pay - </span>
-    <span id = "pay"> </span>
-    <span> Kr </span>
-    <div>
-        <button id="bank">Bank</button>
-        <button id="work">Work</button>
+    <div class="post">
+        <h1>Laptops</h1>
+        <select name="laptops" id="laptops"></select>
+        <p>Features</p>
+        <p id="description"></p>
     </div>
 </div>
 
 <div>
-    <h1>Laptops</h1>
-    <select name="laptops" id="laptops"></select>
-    <p>Features</p>
-    <p id="description"></p>
+    <button id="buy-now"> BUY NOW</button>
 </div>
-
 
 <!--
 TODO: Unimplemented ad
@@ -51,12 +60,11 @@ TODO: Unimplemented ad
 
 <div>
     <h1></h1>
-
 </div>
 
 
 <div>
-    <footer> <p> Author: Ihab </p> </footer>
+    <footer><p> Author: Ihab </p></footer>
 </div>
 <script src="app.js"></script>
 </body>

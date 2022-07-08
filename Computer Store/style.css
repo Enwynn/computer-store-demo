@@ -1,11 +1,25 @@
 header {
     background-color: crimson;
     position: center;
+    height: 29px;
 }
-p{
+h4, h1{
     font-family: sans-serif;
 }
 
+
+.btn {
+    width: 100px;
+}
+
+.post {
+
+
+}
+
+.container {
+
+}
 /*footer {*/
 /*    text-align: center;*/
 /*    background-color: dodgerblue;*/
