@@ -49,9 +49,10 @@ const handleLaptopDropDown = e => {
     const selectedLaptop = result[e.target.selectedIndex];
     currentLaptop = result[e.target.selectedIndex];
     laptopDescription.innerText = selectedLaptop.specs;
+    currentLaptop = selectedLaptop.price;
 }
 
-const handleLoanEvent = e => {
+const handleLoanEvent = () => {
     const balance = bankBalance.innerText;
     const maxLoan = balance * 2;
 
@@ -68,13 +69,13 @@ const handleLoanEvent = e => {
     }
 }
 
-const handleWorkEvent = e => {
+const handleWorkEvent = () => {
 
     const price1 = parseInt(workBalance.innerText);
     workBalance.innerText = price1 + 100;
 }
 
-const handleBankEvent = e => {
+const handleBankEvent = () => {
     let amountToBank = parseInt(bankBalance.innerText) + parseInt(workBalance.innerText);
     let amountToLoan = 0;
 
@@ -91,12 +92,12 @@ const handleBankEvent = e => {
 
 }
 
-const repayLoanEvent = e => {
+const repayLoanEvent = () => {
     loanBalance.innerText = parseInt(loanBalance.innerText) - parseInt(workBalance.innerText);
+    workBalance.innerText = 0;
 
     if (loanBalance.innerText < 0 ) {
-       console.log(Math.abs(loanBalance.innerText));
-        workBalance.innerText = Math.abs(loanBalance.innerText);
+        bankBalance.innerText = parseInt(bankBalance.innerText) + Math.abs(loanBalance.innerText);
         loanBalance.innerText = 0;
         repayLoanButton.hidden = true
     }
@@ -105,11 +106,17 @@ const repayLoanEvent = e => {
     }
 }
 
-const buyNowButton = e => {
+const buyNowButton = () => {
     let currentBalance = bankBalance.innerText;
+    console.log(currentLaptop)
+
 
     if (currentBalance >= currentLaptop) {
+        console.log(bankBalance.innerText)
+        console.log(currentLaptop)
         bankBalance.innerText = parseInt(bankBalance.innerText) - currentLaptop;
+        console.log(bankBalance.innerText)
+        console.log(currentLaptop)
         alert("You are the owner of the laptop!")
     }
     else {
@@ -128,7 +135,7 @@ bankButton.addEventListener("click", handleBankEvent )
 repayLoanButton.addEventListener("click", repayLoanEvent)
 
 buyButton.addEventListener("click", buyNowButton)
-// Eventlisteners
+
 
 
 
