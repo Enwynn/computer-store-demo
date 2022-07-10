@@ -1,31 +1,155 @@
 header {
-    background-color: crimson;
     position: center;
-    height: 29px;
+    height: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: #f9f7f7;
+    font-family: sans-serif, Arial;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-bottom: -30px;
 }
-h4, h1{
+
+.bold {
+    font-weight: bold;
+}
+
+.price {
+    font-size: 40px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #292424;
+}
+
+
+
+.img {
+    margin-top: 20px;
+    width: 160px;
+    height: 150px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px #807676;
+}
+
+h1 {
     font-family: sans-serif;
 }
-
-
-.btn {
-    width: 100px;
-}
-
-.post {
-
-
-}
-
 .container {
-
+    position: center;
 }
-/*footer {*/
-/*    text-align: center;*/
-/*    background-color: dodgerblue;*/
-/*    position: fixed;*/
-/*    width: 100%;*/
-/*    height: 40px;*/
-/*    padding: 10px 10px 10px 10px;*/
-/*    bottom: 0;*/
-/*}*/
+
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    color: #423a3a;
+    font-size: 15px;
+    padding: 40px;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+
+.seperate {
+    word-break:keep-all;
+}
+
+.btn-bank {
+    background: #036b7d;
+    border: 1px  #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #fffafa;
+    cursor: pointer;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.btn-work {
+    background: #036b7d;
+    border: 1px  #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #fffafa;
+    cursor: pointer;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.btn-loan {
+    background: #41b26e;
+    border: 1px  #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #fffafa;
+    cursor: pointer;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn-buy-now {
+    background: #366740;
+    border: 1px  #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #fffafa;
+    cursor: pointer;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+.btn-repay{
+    background: #036b7d;
+    border: 1px  #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #fffafa;
+    cursor: pointer;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.post1 {
+    background-color: #f2f2f2;
+    padding: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fancy-border-radius {
+    border-radius: 0% 100% 0% 100% / 0% 0% 100% 100%;
+    position: center;
+    width: auto;
+    height: auto;
+    height: 100px;
+    background: -webkit-linear-gradient(to right,
+    #594447,
+    #6f0b37);
+    background: linear-gradient(to right,
+    #124966,
+    rgba(3, 84, 85, 0.94));
+}

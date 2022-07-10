@@ -6,83 +6,67 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<header class = fancy-border-radius> Computer Store</header>
 
-<header> Computer Store</header>
-
-<h4> Welcome. Work to be able to buy computers. </h4>
-
+<h4 > Welcome! <br> Work to be able to buy computers </h4>
 
 <body>
 
 <div class="container">
     <div class="post">
         <h1> Joe Banker </h1>
-        <span> Balance : </span>
-        <span id="balance"></span>
-        <span> Kr </span>
+        <div class="post1">
+            <div>
+                <span class="bold"> Balance : </span>
+                <span  id="balance"></span>
+                <span> Kr </span>
+                <br>
+            </div>
+
+            <div id = "loan-div" hidden = "hidden">
+                <span class="bold"> Loan : </span>
+                <span  id="loan"></span>
+                <span> Kr </span>
+            </div>
+
+            <div>
+                <button class="btn-loan" id="get-loan">Get a loan</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="Work">
+    <h1> Work </h1>
+    <div class = "post1">
+    <span class="bold"> Pay : </span>
+    <span id="pay"> </span>
+    <span> Kr </span>
         <br>
-        <span> Loan : </span>
-        <span id="loan"></span>
-        <span> Kr </span>
-
-        <div>
-            <button id="get-loan">Get a loan</button>
-        </div>
-    </div>
-
-    <div class="post">
-        <h1> Work </h1>
-        <span> Pay - </span>
-        <span id="pay"> </span>
-        <span> Kr </span>
-        <div>
-            <button id="bank">Bank</button>
-            <button id="work">Work</button>
-            <button id="repay-loan" hidden="hidden">Repay Loan</button>
-        </div>
-    </div>
-
-    <div class="post">
-        <h1>Laptops</h1>
-        <select name="laptops" id="laptops"></select>
-        <p>Features</p>
-        <p id="description"></p>
+    <button class="btn-bank" id="bank">Bank</button>
+        <br>
+    <button class= "btn-work" id="work">Work</button>
+        <br>
+    <button class= "btn-repay " id="repay-loan" hidden="hidden">Repay Loan</button>
     </div>
 </div>
 
-<div>
-    <button id="buy-now"> BUY NOW</button>
+<div >
+    <h1>Laptops</h1>
+    <div class="post1">
+    <label for="laptops"></label><select name="laptops" id="laptops"></select>
+    <br>
+    <img class = "img" id="laptop-image" src="">
+    <p class="bold">Features</p>
+    <p class="seperate" id="description"></p>
+        <p class="price" id="price-tag"> </p>
+    <button class="btn-buy-now" id="buy-now"> BUY NOW</button>
+    </div>
 </div>
 
-<!--
-TODO: Unimplemented ad
--->
-
-<div>
-    <h1></h1>
-</div>
-
-
-<div>
-    <footer><p> Author: Ihab </p></footer>
-</div>
 <script src="app.js"></script>
 </body>
-
-
 </html>
 
-<!--
-The main file should be "index.html"
 
-Every html file needs a DOCTYPE
-for example "<!DOCTYPE html>"
-
-And a head tag which should include two tags. Meta and title.
-The meta tag should have a attribute called charset, which should be UTF-8.
-
-attributes are extended elements of tags and contain additional information.
-For example name= "value"
-
-<footer> -> Footer is at the bottom of the webpage.
--->
