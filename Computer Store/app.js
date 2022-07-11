@@ -6,7 +6,7 @@ const workBalance = document.getElementById("pay");
 const bankBalance = document.getElementById("balance");
 const loanBalance = document.getElementById("loan")
 const laptops = document.getElementById("laptops");
-const laptopDescription = document.getElementById("description");
+const laptopTitle = document.getElementById("description");
 const getLoanButton = document.getElementById("get-loan");
 const bankButton = document.getElementById("bank");
 const workButton = document.getElementById("work");
@@ -15,6 +15,7 @@ const buyButton = document.getElementById("buy-now")
 const laptopImage = document.getElementById("laptop-image");
 const laptopPrice = document.getElementById("price-tag");
 const loanDiv = document.getElementById("loan-div");
+const laptopDesc = document.getElementById("lap-text")
 
 
 // Initialize some values
@@ -46,10 +47,11 @@ function descFormater(result) {
 const addLaptops = (result) => {
     result.forEach(x => addLaptop(x));
     let desc = descFormater(result);
-    laptopDescription.innerText = desc.join("")
+    laptopTitle.innerText = desc.join("")
     laptopImage.src = "https://noroff-komputer-store-api.herokuapp.com/" + result[0].image;
     currentLaptop = result[0].price
     laptopPrice.innerText = result[0].price + " kr";
+    laptopDesc.innerText = result[0].description
 }
 
 
@@ -65,12 +67,13 @@ const addLaptop = (laptop) => {
 const handleLaptopDropDown = e => {
     const selectedLaptop = result[e.target.selectedIndex];
     currentLaptop = result[e.target.selectedIndex];
-    laptopDescription.innerText = selectedLaptop.specs.toString().split(",").map(function (item) {
+    laptopTitle.innerText = selectedLaptop.specs.toString().split(",").map(function (item) {
         return "* " + item + "\n"
     }).join("")
     currentLaptop = selectedLaptop.price;
     laptopImage.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedLaptop.image;
      laptopPrice.innerText = selectedLaptop.price + " kr";
+     laptopDesc.innerText = selectedLaptop.description
 }
 
 /*
