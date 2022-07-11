@@ -114,12 +114,20 @@ const handleBankEvent = () => {
     if (repayLoanButton.hidden === false) {
         amountToLoan = parseInt(workBalance.innerText) * 0.10
         loanBalance.innerText = parseInt(loanBalance.innerText) - amountToLoan
+        console.log(loanBalance.innerText)
         if (loanBalance.innerText == 0) {
             repayLoanButton.hidden = true
             loanDiv.hidden = true
         }
+        if (loanBalance.innerText < 0) {
+            bankBalance.innerText = parseInt(amountToBank) - parseInt(Math.abs(loanBalance.innerText));
+            loanBalance.innerText = 0;
+            repayLoanButton.hidden = true
+            loanDiv.hidden = true
+            return
+        }
     }
-
+console.log("dont")
     workBalance.innerText = 0;
     bankBalance.innerText = parseInt(amountToBank) - parseInt(amountToLoan);
 
@@ -140,6 +148,7 @@ const repayLoanEvent = () => {
     if (loanBalance.innerText == 0) {
         repayLoanButton.hidden = true
         loanDiv.hidden = true
+
     }
 }
 
